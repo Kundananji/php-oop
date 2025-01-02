@@ -1,6 +1,6 @@
 <?php
 
-class Database
+class Database1
 {
     static $connection;
     static $instance;
@@ -16,13 +16,13 @@ class Database
             //connect to dev database
         }
 
-        echo'<p style="color:blue">New Database Instance</p>';
+        echo'<p style="color:blue">New Database1 Instance</p>';
 
       }
 
       static function getInstance(){
         if(!self::$instance){
-            self::$instance = new Database();
+            self::$instance = new Database1();
         }
         return self::$instance;
 
@@ -34,7 +34,7 @@ class Database
             //only initialize the connection if it has been initialized
 
             self::$connection =new mysqli();
-            echo'<p style="color:red">New Database Connection</p>';
+            echo'<p style="color:red">New Database1 Connection</p>';
         }
            return self::$connection; //MSSQL/Postgres
        }
